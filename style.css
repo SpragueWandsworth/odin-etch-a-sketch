@@ -1,8 +1,22 @@
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prompt-button {
+    outline: solid;
+    background-color: aliceblue;
+    font-weight: 900;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
 .main-container {
     display: flex;
     outline: solid;
-    height: 100vh;
+    height: 90vh;
     width: 100vh;
 }
 
