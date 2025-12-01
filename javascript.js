@@ -1,15 +1,22 @@
+//remove outlines at the end
 
-const mainContainer = document.querySelector('.main-container')
+const mainContainer = document.querySelector('.main-container');
+const promptButton = document.querySelector('.prompt-button');
 
-for (let i = 1; i <= 16; i++) {
-    let column = document.createElement('div');
-    column.textContent = 'test';
-    column.classList.add('box');
-    mainContainer.appendChild(column);
-    for (let i = 1; i<= 15; i++) {
-        let box = document.createElement('div');
-        box.textContent = 'test';
-        box.classList.add('box');
-        column.appendChild(box);
+function createGrid(rows) {
+    if (rows > 100) return;
+    for (let i = 1; i <= rows; i++) {
+        let column = document.createElement('div');
+        column.classList.add('column');
+        mainContainer.appendChild(column);
+        for (let i = 1; i<= rows; i++) {
+            let box = document.createElement('div');
+            box.classList.add('box');
+            column.appendChild(box);
+            box.addEventListener("mouseover", () => box.style.backgroundColor = 'red');
+        };
     };
 };
+
+//let pro = prompt('How many rows do you want?');
+createGrid(16);
