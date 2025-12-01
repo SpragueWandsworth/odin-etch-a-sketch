@@ -11,8 +11,7 @@ promptButton.addEventListener('click', () => createGrid(gridSize = prompt('How m
 function createGrid(rows) {
     while (mainContainer.firstChild) {
         mainContainer.removeChild(mainContainer.firstChild);
-    }
-
+    };
     if (rows > 100) return;
     for (let i = 1; i <= rows; i++) {
         let column = document.createElement('div');
@@ -22,7 +21,7 @@ function createGrid(rows) {
             let box = document.createElement('div');
             box.classList.add('box');
             column.appendChild(box);
-            box.addEventListener("mouseover", () => box.style.backgroundColor = 'red');
+            box.addEventListener("mouseover", () => box.style.backgroundColor = `#${Math.floor(Math.random() * 1000000)}`);
         };
     };
 };

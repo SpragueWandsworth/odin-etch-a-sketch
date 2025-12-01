@@ -1,7 +1,7 @@
 
 .main-container {
     display: flex;
-    outline: solid salmon;
+    outline: solid;
     height: 100vh;
     width: 100vh;
 }
@@ -9,11 +9,9 @@
 .column {
     display: flex;
     flex-direction: column;
-    outline: solid lightskyblue;
     flex: 1;
 }
 
 .box {
-    outline: solid;
     flex: 1;
 }
