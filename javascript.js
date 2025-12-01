@@ -1,5 +1,3 @@
-//remove outlines at the end
-//customise button size and stuff
 
 const mainContainer = document.querySelector('.main-container');
 const promptButton = document.querySelector('.prompt-button');
@@ -21,9 +19,10 @@ function createGrid(rows) {
             let box = document.createElement('div');
             box.classList.add('box');
             column.appendChild(box);
+            //convert to rgb
             box.addEventListener("mouseover", () => box.style.backgroundColor = `#${Math.floor(Math.random() * 1000000)}`);
+            box.addEventListener("mouseover", () => box.style.opacity = String(Number(box.style.opacity) + 0.1));
         };
     };
 };
-
 createGrid(16);
