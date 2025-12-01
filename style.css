@@ -1,0 +1,9 @@
+
+.main-container {
+    display: flex;
+}
+
+.box {
+    outline: solid;
+    flex: 1;
+}
